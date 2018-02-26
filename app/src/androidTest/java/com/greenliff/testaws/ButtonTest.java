@@ -70,4 +70,8 @@ public class ButtonTest {
             }
         };
     }
+    @After
+public void TearDown(){
+    reportHelper.label("Stopping App");
+}
 }
