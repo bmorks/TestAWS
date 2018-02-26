@@ -1,6 +1,12 @@
 package com.greenliff.testaws;
 
 
+import android.support.test.runner.AndroidJUnit4;
+import com.microsoft.appcenter.espresso.Factory;
+import com.microsoft.appcenter.espresso.ReportHelper;
+
+
+
 import android.support.test.espresso.ViewInteraction;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
