@@ -18,6 +18,7 @@ import android.view.ViewParent;
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
+import org.junit.After;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -37,6 +38,9 @@ public class ButtonTest {
 
     @Rule
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
+
+    @Rule
+    public ReportHelper reportHelper = Factory.getReportHelper();
 
     @Test
     public void buttonTest() {
@@ -70,8 +74,9 @@ public class ButtonTest {
             }
         };
     }
+
     @After
-public void TearDown(){
-    reportHelper.label("Stopping App");
-}
+    public void TearDown(){
+        reportHelper.label("Stopping App");
+    }
 }
